@@ -1,5 +1,19 @@
 function balancingParentheses(string) {
-  // type your code here
+  let opener = 0
+  let closer = 0
+
+  for (const item of string) {
+    item === "(" ? opener +=1 : closer +=1
+  }
+
+  return closer - opener
+
+  // for (const item of string) {
+  //   item === "(" ? opener += 1 : opener -=1
+  // }
+
+  // return Math.abs(opener)
+
 }
 
 if (require.main === module) {
@@ -20,5 +34,6 @@ if (require.main === module) {
 
 module.exports = balancingParentheses;
 
-// Please add your pseudocode to this file
-// And a written explanation of your solution
+// Given a string containing parentheses, return the number
+// of additional parenthesis needed for the string to be 
+// considered balanced. 
